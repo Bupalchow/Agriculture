@@ -1,0 +1,770 @@
+/* Global Component Styles */
+:root {
+  --primary-color: #3a9e4c;
+  --primary-dark: #2c7a3a;
+  --primary-light: #b6e7be;
+  --accent-color: #f9a826;
+  --text-color: #333333;
+  --text-light: #666666;
+  --background-light: #f5f7f5;
+  --background-white: #ffffff;
+  --background-card: #f9faf9;
+  --border-color: #e0e0e0;
+  --error-color: #e53935;
+  --success-color: #43a047;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+/* Authentication Forms */
+.auth-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--background-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.auth-container h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-form input {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  width: 100%;
+  transition: var(--transition);
+}
+
+.auth-form input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary-light);
+}
+
+.auth-form button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.auth-form button:hover {
+  background-color: var(--primary-dark);
+}
+
+.auth-switch {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.auth-switch button {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.auth-switch button:hover {
+  text-decoration: underline;
+}
+
+/* Dashboard styles */
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-title {
+  color: var(--text-color);
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.crop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.crop-card {
+  background-color: var(--background-card);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: var(--transition);
+  border-left: 4px solid var(--primary-color);
+}
+
+.crop-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.crop-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.crop-detail {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.crop-progress {
+  margin-top: 1rem;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: var(--border-color);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+/* Crop page styles */
+.crop-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.crop-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.back-button {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.crop-info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.crop-details-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.growth-info, .crop-details {
+  background-color: var(--background-card);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.growth-info h3, .crop-details h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Chat interface styles */
+.chat-section {
+  background-color: var(--background-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  height: 100%;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 700px;
+}
+
+.chat-header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.chat-header h2 {
+  color: var(--primary-color);
+  margin-bottom: 0.3rem;
+}
+
+.chat-header p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.welcome-message {
+  background-color: var(--background-light);
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+.welcome-message h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.welcome-message ul {
+  padding-left: 1.5rem;
+}
+
+.message {
+  max-width: 85%;
+  padding: 1rem;
+  border-radius: var(--radius);
+  animation: fadeIn 0.3s ease;
+}
+
+.message.user {
+  align-self: flex-end;
+  background-color: var(--primary-color);
+  color: white;
+  border-bottom-right-radius: 0;
+}
+
+.message.ai {
+  align-self: flex-start;
+  background-color: var(--background-light);
+  color: var(--text-color);
+  border-bottom-left-radius: 0;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.message.user .message-header {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.message.ai .message-header {
+  color: var(--text-light);
+}
+
+.message-content p {
+  margin-bottom: 0.5rem;
+}
+
+.message.loading {
+  align-self: flex-start;
+  background: none;
+  padding: 0.5rem;
+}
+
+.typing-indicator {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.typing-indicator span {
+  width: 8px;
+  height: 8px;
+  background-color: var(--text-light);
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse 1s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.chat-input {
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid var(--border-color);
+  gap: 0.5rem;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+.chat-input button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0 1.2rem;
+  font-weight: 600;
+}
+
+.suggested-questions {
+  padding: 0.8rem 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.suggested-questions h4 {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.questions-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.question-button {
+  background-color: var(--background-light);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.question-button:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary-color);
+}
+
+/* Add crop form styles */
+.add-crop-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.add-crop-form {
+  background-color: var(--background-white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.add-crop-form h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px var(--primary-light);
+  outline: none;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.submit-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.submit-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.cancel-button {
+  background-color: white;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cancel-button:hover {
+  background-color: var(--background-light);
+}
+
+.error-message {
+  color: var(--error-color);
+  background-color: rgba(229, 57, 53, 0.1);
+  padding: 0.8rem;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+/* Profit Analysis Styles */
+.profit-analysis {
+  background-color: var(--background-card);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.profit-analysis h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.profit-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.profit-form input {
+  flex: 1;
+  min-width: 100px;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+}
+
+.profit-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.profit-table th,
+.profit-table td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.profit-table th {
+  background-color: var(--background-light);
+  font-weight: 600;
+}
+
+.profit-table tr:nth-child(even) {
+  background-color: var(--background-light);
+}
+
+.profit-positive {
+  color: var(--success-color);
+  font-weight: 600;
+}
+
+.profit-negative {
+  color: var(--error-color);
+  font-weight: 600;
+}
+
+/* Land Assessment Styles - Updated for Saved Assessments */
+.land-assessment-container {
+  background-color: var(--background-card);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.land-assessment-container h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.feature-description {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.land-assessment-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.checkbox-group {
+  margin-top: 0.5rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: normal;
+}
+
+.recommendations-container {
+  margin-top: 2rem;
+}
+
+.recommendations-display h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.crop-recommendations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.recommended-crop-card {
+  background-color: var(--background-white);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--primary-color);
+}
+
+.recommended-crop-card h4 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.recommended-crop-card p {
+  margin-bottom: 0.5rem;
+}
+
+.crop-tips {
+  margin-top: 1rem;
+}
+
+.crop-tips h5 {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.crop-tips ul {
+  padding-left: 1.5rem;
+}
+
+.crop-tips li {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.seasonal-forecasts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.season-card {
+  background-color: var(--background-white);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.season-card h4 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.efficiency-improvements ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.efficiency-improvements li {
+  margin-bottom: 0.5rem;
+}
+
+.back-button {
+  margin-top: 1.5rem;
+  background-color: var(--background-light);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.back-button:hover {
+  background-color: var(--background-card);
+}
+
+.weather-forecast {
+  background-color: #f0f8ff;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.weather-forecast h3 {
+  color: #4a90e2;
+}
+
+/* Make the form single column on smaller screens */
+@media (max-width: 768px) {
+  .land-assessment-form {
+    grid-template-columns: 1fr;
+  }
+  
+  .crop-recommendations,
+  .seasonal-forecasts {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; transform: scale(0.8); }
+  50% { opacity: 0.8; transform: scale(1.2); }
+  100% { opacity: 0.4; transform: scale(0.8); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .crop-info-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .crop-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+  
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .dashboard-actions {
+    width: 100%;
+  }
+  
+  .dashboard-actions button {
+    flex: 1;
+  }
+}
