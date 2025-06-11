@@ -58,7 +58,7 @@ const AddCrop = ({ farmerId, onClose, onCropAdded }) => {
             const expectedHarvestDate = new Date(plantingDate);
             expectedHarvestDate.setDate(plantingDate.getDate() + parseInt(cropData.growth_duration));
 
-            const response = await axios.post('http://localhost:5000/api/crops/add', {
+            const response = await axios.post('https://agriculturebackend-production-c8fd.up.railway.app/api/crops/add', {
                 farmer_id: farmerId,
                 ...cropData,
                 expected_harvest_date: expectedHarvestDate.toISOString().split('T')[0]
@@ -78,7 +78,7 @@ const AddCrop = ({ farmerId, onClose, onCropAdded }) => {
     const validateFieldSize = (value) => {
         const size = parseFloat(value);
         if (size <= 0) return 'Field size must be greater than 0';
-        if (size > 10000) return 'Field size seems too large';
+        if (size > 10000) return 'Field size seems to large';
         return '';
     };
 

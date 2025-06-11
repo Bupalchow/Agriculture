@@ -14,7 +14,7 @@ const Register = ({ onRegister }) => {
         setIsLoading(true);
         
         try {
-            await axios.post('http://localhost:5000/api/farmers/register', {
+            await axios.post('https://agriculturebackend-production-c8fd.up.railway.app/api/farmers/register', {
                 username,
                 password,
                 location,

@@ -13,7 +13,7 @@ const CropDetails = ({ crop, farmerId, onClose }) => {
 
     const fetchCropDetails = async () => {
         try {
-            const response = await axios.get(`http://localhost:5000/api/crops/details/${crop.id}`);
+            const response = await axios.get(`https://agriculturebackend-production-c8fd.up.railway.app/api/crops/details/${crop.id}`);
             setCropDetails(response.data);
         } catch (err) {
             console.error('Error fetching crop details:', err);

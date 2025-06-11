@@ -38,7 +38,7 @@ const LandAssessment = ({ farmerId }) => {
 
     const fetchSavedAssessments = async () => {
         try {
-            const response = await axios.get(`http://localhost:5000/api/land-assessment/${farmerId}`);
+            const response = await axios.get(`https://agriculturebackend-production-c8fd.up.railway.app/api/land-assessment/${farmerId}`);
             setSavedAssessments(response.data);
         } catch (err) {
             console.error('Failed to fetch saved assessments:', err);
@@ -59,7 +59,7 @@ const LandAssessment = ({ farmerId }) => {
         setError('');
         
         try {
-            const response = await axios.post('http://localhost:5000/api/land-assessment', {
+            const response = await axios.post('https://agriculturebackend-production-c8fd.up.railway.app/api/land-assessment', {
                 farmerId,
                 ...formData
             });
@@ -78,7 +78,7 @@ const LandAssessment = ({ farmerId }) => {
 
     const handleViewAssessment = async (assessmentId) => {
         try {
-            const response = await axios.get(`http://localhost:5000/api/land-assessment/details/${assessmentId}`);
+            const response = await axios.get(`https://agriculturebackend-production-c8fd.up.railway.app/api/land-assessment/details/${assessmentId}`);
             setSelectedAssessment(response.data);
             setShowSavedList(false);
         } catch (err) {
@@ -90,7 +90,7 @@ const LandAssessment = ({ farmerId }) => {
         if (!recommendations) return;
         
         try {
-            await axios.post('http://localhost:5000/api/land-assessment/save', {
+            await axios.post('https://agriculturebackend-production-c8fd.up.railway.app/api/land-assessment/save', {
                 farmerId,
                 landDetails: formData,
                 recommendations

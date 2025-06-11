@@ -19,7 +19,7 @@ const Dashboard = ({ farmer }) => {
     const handleCropAdded = async () => {
         // Refresh crops list
         try {
-            const response = await axios.get(`http://localhost:5000/api/crops/${farmer.id}`);
+            const response = await axios.get(`https://agriculturebackend-production-c8fd.up.railway.app/api/crops/${farmer.id}`);
             setCrops(response.data);
         } catch (err) {
             alert('Failed to refresh crops: ' + err.message);
@@ -30,7 +30,7 @@ const Dashboard = ({ farmer }) => {
         const fetchCrops = async () => {
             setIsLoading(true);
             try {
-                const response = await axios.get(`http://localhost:5000/api/crops/${farmer.id}`);
+                const response = await axios.get(`https://agriculturebackend-production-c8fd.up.railway.app/api/crops/${farmer.id}`);
                 setCrops(response.data);
             } catch (err) {
                 alert('Failed to fetch crops: ' + err.response?.data?.error || err.message);
