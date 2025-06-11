@@ -1,8 +1,12 @@
 {
   "name": "agriculture",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "backend/server.js",
   "scripts": {
+    "start": "cd backend && node server.js",
+    "dev": "cd backend && nodemon server.js",
+    "migrate": "cd backend && node migrate.js",
+    "migrate-public": "cd backend && node migrate-public.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -18,5 +22,8 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mysql2": "^3.12.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
