@@ -50,7 +50,7 @@ const ChatInterface = ({ cropDetails }) => {
         setLoading(true);
 
         try {
-            const response = await axios.post('http://localhost:5000/api/crops/chat', {
+            const response = await axios.post('https://agriculturebackend-production-c8fd.up.railway.app/api/crops/chat', {
                 message: userMessage,
                 cropDetails: {
                     crop_name: cropDetails.crop_name,

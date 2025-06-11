@@ -16,7 +16,7 @@ const ProfitAnalysis = ({ farmerId }) => {
         const fetchProfitData = async () => {
             setIsLoading(true);
             try {
-                const response = await axios.get(`http://localhost:5000/api/profit/${farmerId}`);
+                const response = await axios.get(`https://agriculturebackend-production-c8fd.up.railway.app/api/profit/${farmerId}`);
                 setProfitData(response.data);
             } catch (err) {
                 setError('Failed to fetch profit data: ' + err.response?.data?.error || err.message);
@@ -31,10 +31,10 @@ const ProfitAnalysis = ({ farmerId }) => {
         e.preventDefault();
         setError('');
         try {
-            await axios.post('http://localhost:5000/api/profit/add', newProfit);
+            await axios.post('https://agriculturebackend-production-c8fd.up.railway.app/api/profit/add', newProfit);
             setNewProfit({ crop_id: '', cost_of_planting: '', sale_price: '', yield: '' });
             // Refresh profit data
-            const response = await axios.get(`http://localhost:5000/api/profit/${farmerId}`);
+            const response = await axios.get(`https://agriculturebackend-production-c8fd.up.railway.app/api/profit/${farmerId}`);
             setProfitData(response.data);
         } catch (err) {
             setError('Failed to add profit analysis: ' + err.response?.data?.error || err.message);
